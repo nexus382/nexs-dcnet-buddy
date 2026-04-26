@@ -4,24 +4,21 @@
 
 ## Latest Release
 
-### v0.1.2 - 2026-04-26
+### v0.1.3 - 2026-04-26
 
 #### Added
-- Auto-detect ROM from game library folder - app now scans your game folder and finds matching ROMs automatically
-- Pin favorite games - tap the pin icon on any game card to track it
-- Pinned games section on home screen - pinned games appear at the top for quick access
-- App renamed to "Nex's DCNET Buddy"
-- AGENTS.md documentation for development guidelines
+- Websocket-based live updates for DCNET status topics to reduce repeated REST polling
+- ETag-aware API cache handling for lighter network use on unchanged data
+- Persistent `COMING SOON` chat banner in global chat, game companion chat, and home chat preview
 
 #### Changed
-- Home screen now only shows games with active players (filtered)
-- Chat features disabled with "COMING SOON" feedback until backend is ready
-- Refresh button in game detail now works properly
-- Firebase removed - app no longer requires Firebase setup
+- Refresh flows now update more smoothly across Home, Games, People, and Game Detail screens
+- Chat send/post actions continue to show explicit “coming soon” feedback while backend chat is still gated
+- Game/presence rendering now favors live state updates and safer fallback behavior
 
 #### Fixed
-- UserService getters properly restored for build compatibility
-- Chat toast only shows once on first open
+- Removed broken fallback references to missing mock members (`MockDataService.games` and `MockDataService.players`) that caused Windows build failures
+- Included related model/widget/service hardening needed for current production behavior
 
 ---
 
