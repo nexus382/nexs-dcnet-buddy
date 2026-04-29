@@ -45,4 +45,4 @@ Download the latest release from the [Releases page](https://github.com/nexus382
 
 ## Source Code
 
-The source code is available in the [dcnet-app](https://github.com/nexus382/dcnet-app) repository.
+The source code is available in the dcnet-app repository.
