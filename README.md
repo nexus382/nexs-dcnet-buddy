@@ -4,27 +4,28 @@
 
 ## Latest Release
 
-### v0.1.4 - 2026-04-29
+### v0.2.0 - 2026-04-29
 
 #### Added
-- **Firebase RTDB-backed preset chat** - predefined message buttons, minutes/game picker, real send/read flow
-- Game detail top stats now includes an **App Users** count alongside Players and Lobbies
-- Home screen now shows a top stats row for **Players**, **Lobbies**, and **App Users**
-- Games screen top stats shows **Players**, **Lobbies**, and **App Users**
-- Game cards now show per-game **App Users** counts from `presence/game_chats`
-- Firebase RTDB rules document and allow `presence/app_users` and `presence/game_chats` paths
+- **Real-Time Chat System** - Global and game-specific chat rooms with message persistence via Firebase RTDB
+- **Preset Message Buttons** - Quick communication with predefined messages
+- **Hybrid Messages** - Customizable values in some preset messages (minutes, player count)
+- **Presence Tracking** - Global app users and per-game chat presence with online status
+- **Friends System** - Add and manage friends by display name, stored locally
+- **Setup Guides** - In-game help with step-by-step instructions for each game
+- **Live Stats** - Home/Games screens show Players, Lobbies, and App Users counts
 
 #### Changed
-- Global app-user parsing now tolerates missing `userId`/`lastSeenAt` fields for mixed-client compatibility
-- Per-game app-user counts fetched via one shared `presence/game_chats` poll (10s interval) instead of per-room scans
-- Presence refresh logic is leaner: game-chat users refresh on room entry, activity, and 30-second in-room poll
-- Global app-users fetch preserves last known list on read failure instead of forcing synthetic entries
+- App user presence counting ignores stale entries for accurate counters
+- Per-game app-user counts from one shared presence poll instead of per-room scans
+- Presence refresh is event-driven: room entry, activity, 30s in-room poll
+- Global app-users fetch preserves last known list on read failure
+- Efficient server communication with best-effort presence writes
 
 #### Fixed
 - Chat and presence screens no longer freeze when presence writes fail
-- Chat message streams initialize and update even if presence endpoints error
-- Game chat/app presence heartbeat writes are now best-effort and non-fatal
-- App user presence counting now ignores stale entries for accurate counters
+- Message streams initialize even if presence endpoints error
+- Presence writes are best-effort and non-fatal
 
 ---
 
