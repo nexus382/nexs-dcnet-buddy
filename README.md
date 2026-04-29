@@ -68,23 +68,30 @@ Fortunately, the community never stopped playing. DCNET has revived the original
 
 ## Getting Started
 
-### 1. Install Flutter
+### 1. Download the Latest Release
 
-Download Flutter from [flutter.dev](https://flutter.dev) and follow the [setup guide](https://docs.flutter.dev/get-started/install). Run `flutter doctor` to verify your setup.
+1. Download the latest release from GitHub
+2. Extract the zip file - leave the .exe in the extracted folder
+3. Create a shortcut on your desktop if you want quick access
 
-### 2. Clone and Run
+### 2. First-Time Setup
 
-```bash
-git clone https://github.com/nexus382/dcnet-app.git
-cd dcnet-app
-flutter pub get
-flutter run
-```
+1. Launch the app
+2. Go to **Settings** and set your **display name** - must match your DCNET username
+3. Configure your **Flycast path** (location of flycast.exe)
+4. Configure your **game library folder** (where your ROMs are stored)
+5. For each game you want quick-launch access to, tap **Set up JOIN** - auto-detect will find your ROM, or browse manually
+6. Tap **Save**, then tap **Verify** to confirm
 
-### 3. First-Time Setup
+**Recommended:** Spend 5 minutes setting up JOIN for all your games now, so they're ready when you need them.
 
-1. Choose a **display name** — how other players will see you in chat
-2. Go to **Settings** to configure your **Flycast path** and **game library folder**
+### 3. Quick Launch Integration
+
+With DCNET Buddy, you can go from cold start to netplay screen in about **3 seconds**:
+- Traditional startup: 2-5 minutes of manual navigation
+- With DCNET Buddy: Single click from this app → Flycast launches → Game loads → Netplay screen ready
+
+Just tap **JOIN** on any configured game and Flycast opens directly to that game's netplay screen.
 
 ---
 
