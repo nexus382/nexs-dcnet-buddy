@@ -15,7 +15,7 @@ Fortunately, the community never stopped playing. DCNET has revived the original
 - **No setup required** — works with Flycast, the #1 rated and downloaded Dreamcast emulator
 - **Real hardware support** — connect your actual Dreamcast via DreamPI with support for VMU, Rumble, and any controller through DreamPicoPort
 - **Full VMU emulation** — DreamPotato integration brings complete VMU functionality to Flycast, in heavy active development
-- **Minimal data usage** — online gameplay uses next to nothing (~0.5 Mbps), so 2 GB/day gives you a perfect experience all day long
+- **Minimal data usage** — online gameplay uses next to nothing (~0.5 Mbps), so 2 GB/day phone plans have no fear playing DCNET all day using almost no data.
 - **Hybrid play** — connect your real Dreamcast OR emulator to DCNET and play with everyone
 
 **The problem?** Finding other players was nearly impossible. DCNET Buddy solves that — see who's online, what they're playing, and get into the game in seconds.
