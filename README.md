@@ -196,3 +196,21 @@ MIT License — free to use, modify, and distribute.
 Open an issue on GitHub or reach out to the DCNET community.
 
 Happy gaming! 🎮
+
+---
+
+## Changelog
+
+### [0.2.1] - 2026-04-30
+
+#### Added
+- **Instructions Screen** — Professional onboarding shown on first boot. Covers: why use the app, instant netplay load, finding players, push notifications, flycast keyboard setup, gaming tips and best practices. Help button (?) in home screen to access anytime.
+- **Toast Notifications** — On-screen alerts for messages, player joins, lobby changes, friend online with per-type toggles.
+- **Sound Effects** — Boot, message, success, and back navigation sounds with volume control and master mute.
+- **Gaming Tips in Help Popup** — Flycast keyboard setup (PORT D config), set up all games, leave app running, match DCNET name, patience in lobbies, share the app.
+
+#### Fixed
+- Prevented input-backed chat sends from reading stale cached chat data.
+- Hardened chat toast delivery for missing overlay context.
+- Fixed game-screen exit lifecycle race conditions.
+- Restored native sound playback and Windows toast notifications.
