@@ -179,6 +179,32 @@ Display name, Flycast/ROM paths, notification toggles, theme selection (Light / 
 
 ---
 
+## Changelog
+
+## [0.2.2] - 2026-05-01
+
+### Added
+- **Light Theme Readability Fix** — Completely reworked light theme with proper contrast: white/#FAFAFA background, WCAG-compliant text colors, elevated cards with visible borders, readable navigation icons/labels
+- **Periodic Update Check** — App now checks for updates every 30 minutes while running and shows update dialog if a new version is found
+- **Receive Sound for Messages** — Added distinct sound (`doo_doo.mp3`) when receiving chat messages; sending messages is now silent
+
+### Fixed
+- **ChatService Resource Leaks** — Added proper `dispose()` method to close all StreamControllers, remove listeners, and cancel timers that were previously leaking
+- **PresenceService Resource Leak** — Fixed controller never being closed
+- **DcntStatusSocket Race Condition** — Fixed `_connecting` flag race that could cause duplicate WebSocket connections
+- **API 304 Cold-Cache Bug** — Fixed crash when server returns 304 with no cached body
+- **Game Composer Layout** — Changed from fixed-height ListView to Wrap-based layout so game selection chips wrap properly on narrow screens and show scrollbar when needed
+- **Home Screen Ping Storm** — Multiple socket listeners now properly debounced (350ms) to prevent redundant API calls
+- **SharedPreferences Cache** — Now cached after init instead of reopened on every access
+
+### Changed
+- **GameCard Theming** — All GameCard widgets now adapt colors based on light/dark theme (gradient, stats, chips, indicators, join button)
+- **Navigation Colors** — Light theme nav icons/labels now use grey[700] for proper contrast
+- **Input Fields** — Proper enabled/focused border states in light theme
+- **Stat Badges** — Adjusted opacity for proper visibility on light backgrounds
+
+---
+
 ## License
 
 MIT License — free to use, modify, and distribute.
