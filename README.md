@@ -181,6 +181,13 @@ Display name, Flycast/ROM paths, notification toggles, theme selection (Light / 
 
 ## Changelog
 
+## [0.2.3] - 2026-05-01
+
+### Fixed
+- **Freeform Chat Dev Messages** — Fixed the ability to type and read developer chat messages. The system now properly displays and allows input for dev-level messages in the chat system.
+
+---
+
 ## [0.2.2] - 2026-05-01
 
 ### Added
