@@ -181,6 +181,19 @@ Display name, Flycast/ROM paths, notification toggles, theme selection (Light / 
 
 ## Changelog
 
+## [0.2.4] - 2026-05-02
+
+### Fixed
+- **Player Count Consistency** — Home screen, Games screen, and Game Detail screen now all pull from the same `/players` API endpoint, eliminating staleness mismatches where game detail showed 1 player while home showed 0. All screens now display the accurate real-time count.
+
+### Added
+- **Window Resizing & Wrapping** — All screens now adapt gracefully to window resize. Games screen stats header switches from row to wrap layout on narrow windows. Message lists and guide sections have proper scroll constraints.
+
+### Changed
+- **Data Usage Overhaul** — Significantly reduced redundant download overhead from polling and caching logic. The app now makes fewer redundant API calls by sharing fetch state across screens. Users stay connected without creating excessive server load.
+
+---
+
 ## [0.2.3] - 2026-05-01
 
 ### Fixed
