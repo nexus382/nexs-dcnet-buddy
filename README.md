@@ -181,6 +181,47 @@ Display name, Flycast/ROM paths, notification toggles, theme selection (Light / 
 
 ## Changelog
 
+## [0.3.0] - 2026-05-03
+
+### Added
+- **Full Android APK Release** — First production Android build with full feature parity
+- Native Android notifications via vendored `flutter_local_notifications` plugin (patched for compile compatibility)
+- Cross-platform sound via `audioplayers` package (Windows uses PowerShell beep, Android/macOS/Linux use audio URLs)
+- Android notification channel with high importance and vibration
+- Android notification permission request flow (Android 13+)
+- Game card displays real player count from API when available (takes higher value between API and app users)
+
+### Changed
+- `cached_network_image` upgraded to ^3.4.1
+- SoundService now properly disposes AudioPlayer resources on dispose
+
+### Fixed
+- Android release build failure (`bigLargeIcon(null)` Java overload ambiguity) — fixed by vendoring and patching the plugin
+- Android core library desugaring properly enabled for Java 8+ APIs
+
+### ⚠️ ANDROID RELEASE NOTE
+**This is the FIRST Android release.** The Android APK is brand new and will have bugs. Please report all issues on the GitHub issues page — your reports help us fix problems faster!
+
+---
+
+## [0.2.5] - 2026-05-02
+
+### Added
+- **Android Support** — App now runs on Android devices (minSdk 23). Same functionality as Windows version with native Android notifications and system sounds.
+- **Cross-Platform Sound** — Sound effects now work on Android via `audioplayers` package (online tone URLs). Windows continues using PowerShell beep tones.
+- **Android Notifications** — System-level notifications via `flutter_local_notifications` package. Permission requested at first launch (Android 13+). Graceful degradation if denied.
+- **ROM Binding on Desktop Only** — Flycast ROM binding and auto-detect features are now hidden on Android (Flycast is desktop-only). Users see a clear message explaining this feature is Windows-only.
+
+### Changed
+- `flutter_local_notifications: ^16.0.0` (compatible with Flutter 3.11.5)
+- `audioplayers: ^6.1.0`
+- `minSdk` bumped to 23 (from Flutter default) to support `flutter_local_notifications`
+
+### Fixed
+- **Android 13+ Notification Permissions** — App now properly requests `POST_NOTIFICATIONS` permission at runtime and checks before showing each notification.
+
+---
+
 ## [0.2.4] - 2026-05-02
 
 ### Fixed
